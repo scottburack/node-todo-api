@@ -9,19 +9,10 @@ router.get('/', (req, res) => res.send('Hello World!'));
 
 router.route('/todos')
     .get((req, res) => {
-        res.json([
-            {
-            "_id": "a",
-            "text": "Item 1",
-            "done": false
-            },
-            {
-            "_id": "b",
-            "text": "Item 2",
-            "done": false
-            }
-        ])
-    })
+        Todo.all(function(data){
+          res.json(data)
+        })
+    });
 
 app.use('/', router)
 
