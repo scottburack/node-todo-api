@@ -6,6 +6,12 @@ const bodyParser = require('body-parser');
 
 const Todo = require('./todo');
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Headers", "PUT, POST, GET, OPTIONS");
+})
+
 router.get('/', (req, res) => res.send('Hello World!'));
 
 router.route('/todos')
