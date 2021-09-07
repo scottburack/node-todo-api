@@ -1,0 +1,23 @@
+body {
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.todo {
+    background: #eaeaea;
+    margin: 5px auto;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.todo input {
+  background: #eaeaea;
+  border: 0;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.todo .done {
+    text-decoration: line-through;
+}
